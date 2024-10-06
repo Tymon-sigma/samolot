@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Samolot</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #8fb996; 
+            position: relative;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        .runway {
+            position: absolute;
+            bottom: 0;
+            width: 200px;
+            height: 50px;
+            background-color: #c2b280;
+        }
+
+        .runway.left {
+            left: 40px;
+        }
+
+        .runway.right {
+            right: 40px;
+        }
+
+        .plane {
+            font-size: 80px;
+            position: absolute;
+            right: 40px;
+            bottom: 25px;
+            width: 80px;
+            height: auto;
+            animation: fly 2s infinite;
+            animation-timing-function: linear;
+            will-change: transform;
+        }
+
+        @keyframes fly {
+            0% {
+                transform: translateX(0) translateY(0);
+            }
+            5% {
+                transform: translateX(calc((100vw - 240px) * -0.05)) translateY(-35px);
+            }
+            10% {
+                transform: translateX(calc((100vw - 240px) * -0.1)) translateY(-70px);
+            }
+            15% {
+                transform: translateX(calc((100vw - 240px) * -0.15)) translateY(-95px);
+            }
+            20% {
+                transform: translateX(calc((100vw - 240px) * -0.2)) translateY(-130px);
+            }
+            25% {
+                transform: translateX(calc((100vw - 240px) * -0.25)) translateY(-155px);
+            }
+            30% {
+                transform: translateX(calc((100vw - 240px) * -0.3)) translateY(-180px);
+            }
+            35% {
+                transform: translateX(calc((100vw - 240px) * -0.35)) translateY(-200px);
+            }
+            40% {
+                transform: translateX(calc((100vw - 240px) * -0.4)) translateY(-220px);
+            }
+            45% {
+                transform: translateX(calc((100vw - 240px) * -0.45)) translateY(-230px);
+            }
+            50% {
+                transform: translateX(calc((100vw - 240px) * -0.5)) translateY(-240px);
+            }
+            55% {
+                transform: translateX(calc((100vw - 240px) * -0.55)) translateY(-230px);
+            }
+            60% {
+                transform: translateX(calc((100vw - 240px) * -0.6)) translateY(-220px);
+            }
+            65% {
+                transform: translateX(calc((100vw - 240px) * -0.65)) translateY(-200px);
+            }
+            70% {
+                transform: translateX(calc((100vw - 240px) * -0.7)) translateY(-180px);
+            }
+            75% {
+                transform: translateX(calc((100vw - 240px) * -0.75)) translateY(-155px);
+            }
+            80% {
+                transform: translateX(calc((100vw - 240px) * -0.8)) translateY(-130px);
+            }
+            85% {
+                transform: translateX(calc((100vw - 240px) * -0.85)) translateY(-95px);
+            }
+            90% {
+                transform: translateX(calc((100vw - 240px) * -0.9)) translateY(-70px);
+            }
+            95% {
+                transform: translateX(calc((100vw - 240px) * -0.95)) translateY(-35px);
+            }
+            100% {
+                transform: translateX(calc((100vw - 240px) * -1)) translateY(0);
+            }
+        }
+
+
+        @keyframes float {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(100vw);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="runway left"></div>
+    <div class="runway right"></div>
+    <div class="plane">✈️</div>
+
+
+</body>
+</html>
